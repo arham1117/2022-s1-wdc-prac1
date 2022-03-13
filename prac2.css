@@ -24,8 +24,8 @@ pre{
 .transparent-text{
     color:rgba(0,0,0,0.5);
 }
-div{
-    background: url('https://myuni.adelaide.edu.au/courses/75039/files/10149623/download?wrap=1');
+body{
+    background: url('cross.png');
     background-color:#DCF5F5;
 
 }
