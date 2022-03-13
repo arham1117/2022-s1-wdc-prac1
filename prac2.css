@@ -29,3 +29,12 @@ pre{
     background-color:#DCF5F5;
 
 }
+#content{
+    background-color: white;
+}
+.blue{
+    color:blue;
+}
+.fancy{
+    font-family:cursive;
+}
