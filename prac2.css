@@ -1,5 +1,8 @@
-h1 {
+h1{
     font-family: sans-serif;
+}
+h3{
+    color:rgba(0,0,139,0.8);
 }
 a{
     color: darkgreen;
@@ -17,4 +20,7 @@ h2 {
 }
 pre{
     font-family: monospace
+}
+.transparent-text{
+    color:rgba(0,0,0,0.5);
 }
