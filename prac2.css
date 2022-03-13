@@ -47,9 +47,6 @@ pre{
     outline:1px solid red;
 }
 
-.red{
-    border: 1px solid red;
-}
 .blue{
     border: 1px solid blue;
 }
@@ -63,4 +60,7 @@ pre{
     border:1px solid blue;
     border-bottom-left-radius:8px;
     border-bottom-right-radius:8px;
+}
+hr{
+    border:1px solid #CFDFE4;
 }
