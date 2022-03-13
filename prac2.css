@@ -24,7 +24,7 @@ pre{
 .transparent-text{
     color:rgba(0,0,0,0.5);
 }
-body{
+.background{
     background: url('cross.png');
     background-color:#DCF5F5;
 
