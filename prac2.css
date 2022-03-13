@@ -31,10 +31,36 @@ pre{
 }
 #content{
     background-color: white;
+    border: 1px solid darkgrey;
+    border-radius: 8px
 }
 .blue{
     color:blue;
 }
 .fancy{
     font-family:cursive;
+}
+.red-border{
+    border: 1px solid red;
+}
+.red-outline{
+    outline:1px solid red;
+}
+
+.red{
+    border: 1px solid red;
+}
+.blue{
+    border: 1px solid blue;
+}
+.red-border-rounded{
+    border: 1px solid red;
+    border-top-left-radius: 8px;
+    border-top-right-radius:8px;
+    border-bottom: none;
+}
+.blue-border-rounded{
+    border:1px solid blue;
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
 }
