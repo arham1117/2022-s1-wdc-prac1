@@ -43,24 +43,31 @@ pre{
 .red-border{
     border: 1px solid red;
 }
+hr{
+    border: #CFDFE4;
+}
 .red-outline{
     outline:1px solid red;
 }
+.red-borderr{
+    border:  solid red;
+}
 
 .blue-border{
-    border: 1px solid blue;
+    border: solid blue;
 }
 .red-border-rounded{
-    border: 1px solid red;
-    border-top-left-radius: 8px;
-    border-top-right-radius:8px;
+    border-style: solid;
+    border-top-color: red;
+    border-left-color: red;
+    border-right-color: red;
     border-bottom: none;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+
 }
 .blue-border-rounded{
-    border:1px solid blue;
+    border: solid blue;
     border-bottom-left-radius:8px;
     border-bottom-right-radius:8px;
-}
-hr{
-    border: 1px solid #CFDFE4;
 }
