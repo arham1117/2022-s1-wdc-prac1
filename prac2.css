@@ -44,7 +44,7 @@ pre{
     border: 1px solid red;
 }
 hr{
-    border: #CFDFE4;
+    border-color:  #CFDFE4;
 }
 .red-outline{
     outline:1px solid red;
