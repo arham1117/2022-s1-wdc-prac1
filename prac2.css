@@ -49,18 +49,12 @@ hr{
 .red-outline{
     outline:1px solid red;
 }
-.red-borderr{
-    border:  solid red;
-}
 
 .blue-border{
     border: solid blue;
 }
 .red-border-rounded{
-    border-style: solid;
-    border-top-color: red;
-    border-left-color: red;
-    border-right-color: red;
+    border: solid red;
     border-bottom: none;
     border-top-left-radius:8px;
     border-top-right-radius:8px;
