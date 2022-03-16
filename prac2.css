@@ -47,7 +47,7 @@ pre{
     outline:1px solid red;
 }
 
-.blue{
+.blue-border{
     border: 1px solid blue;
 }
 .red-border-rounded{
@@ -62,5 +62,5 @@ pre{
     border-bottom-right-radius:8px;
 }
 hr{
-    border:1px solid #CFDFE4;
+    border: 1px solid #CFDFE4;
 }
