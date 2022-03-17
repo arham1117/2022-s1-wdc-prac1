@@ -116,7 +116,14 @@ h4{
     text-decoration:underline;
 
 }
-.center{
+.icons{
+    margin: auto;
+    box-sizing: border-box;
+    width: 100px;
+    padding: 12px;
+}
+
+.icon_color{
     color:#BFCFD4;
 }
 
