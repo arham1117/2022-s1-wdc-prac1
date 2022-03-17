@@ -29,6 +29,7 @@ pre{
 .background{
     background: url('cross.png');
     background-color:#DCF5F5;
+    font-family: 'Noto Serif', serif;
 
 }
 #content{
@@ -115,6 +116,3 @@ h4{
 
 }
 
-p{
-    font-family: 'Noto Serif', serif;
-}
