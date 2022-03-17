@@ -103,7 +103,7 @@ hr{
 
 .just{
     text-align:justify;
-    text-justify: inner-word;
+    text-justify: inter-word;
     font-family: "Raleway";
     line-height: 1.5;
     word-spacing: 0.2em;
