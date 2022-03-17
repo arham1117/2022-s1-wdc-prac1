@@ -1,5 +1,5 @@
 h1{
-    font-family: sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 h3{
     color:rgba(0,0,139,0.8);
@@ -15,7 +15,7 @@ mark{
     color: darkblue;
 }
 h2 {
-   font-family: sans-serif;
+   font-family: "Raleway", sans-serif;
    text-align: left;
 }
 pre{
@@ -33,6 +33,7 @@ pre{
     background-color: white;
     border: 1px solid darkgrey;
     border-radius: 8px;
+    font-family: "Noto Serif", serif;
 }
 .blue{
     color:blue;
@@ -97,3 +98,19 @@ hr{
     height: 400px;
     background-color:yellow;
 }
+
+.just{
+    text-align:justify;
+    font-family: "Raleway";
+    line-height: 1.5;
+    word-spacing: 0.2em;
+    color: dimgrey;
+}
+h4{
+    font-family:"Raleway";
+    font-style: italic;
+    font-weight: normal;
+    text-decoration:underline;
+
+}
+
