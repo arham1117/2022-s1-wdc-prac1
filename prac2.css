@@ -1,5 +1,6 @@
 h1{
     font-family: "Raleway", sans-serif;
+    font-style: normal;
 }
 h3{
     color:rgba(0,0,139,0.8);
@@ -16,6 +17,7 @@ mark{
 }
 h2 {
    font-family: "Raleway", sans-serif;
+   font-stle: normal;
    text-align: left;
 }
 pre{
@@ -33,7 +35,6 @@ pre{
     background-color: white;
     border: 1px solid darkgrey;
     border-radius: 8px;
-    font-family: "Noto Serif", serif;
 }
 .blue{
     color:blue;
@@ -114,3 +115,6 @@ h4{
 
 }
 
+p{
+    font-family: "Noto Serif", serif;
+}
