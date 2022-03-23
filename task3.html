@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <title>Practical Excercise 3 - Part 3</title>
         <link rel="stylesheet" href="task3.css">
+
     </head>
 
     <body>
@@ -16,15 +17,19 @@
             <div id="mcount" onmouseenter="mouseCount()">
 
             </div>
-            <div id="posts"></div>
+            <div id="posts" >
+            <p class="post-time"></p>
+            <p class ="post-content"></p>
+
+            </div>
             <hr />
-            <textarea rows="4" cols="60">Type your text here...</textarea>
+            <textarea id="text" rows="4" cols="60">Type your text here...</textarea>
             <br />
             <div class="controls left">
                 <input type="number" name="quantity" value="1" /><br />
                 <input type="radio" name="color" value="blue" /> Blue<br />
                 <input type="radio" name="color" value="red" /> Red<br />
-                <button>Post</button>
+                <button onclick="postContent()">Post</button>
             </div>
             <div class="controls left">
                 <input type="range" name="visible" min="1" max="10" value="10"/><br />
@@ -43,9 +48,8 @@
             <span>Background Color:</span><input type="text">
         </div>
 
-    <script src = "task3.js">
+    <script src = "task3.js"> </script>
 
-    </script>
     </body>
 
 </html>

@@ -40,6 +40,10 @@ h1,h2,h3 {
     margin: 0px 10px 10px 150px;
     min-height: 100px;
 }
+.post-time{
+    font-weight : bold;
+    color : grey;
+}
 
 hr {
     clear: both;
