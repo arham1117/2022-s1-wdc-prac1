@@ -12,3 +12,14 @@ function postContent(){
     document.getElementsByClassName("post-content")[0].innerHTML= content;
 
 }
+
+function hideMain(){
+    document.getElementById("main").style.display = "none";
+    document.getElementById("menu").style.display = "block";
+
+}
+function hideMenu(){
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("main").style.display = "block";
+
+}
