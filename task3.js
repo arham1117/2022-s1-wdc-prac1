@@ -1,15 +1,57 @@
 let count = 0;
+
 function mouseCount(){
     count = count + 1;
     document.getElementById("mcount").innerHTML = count;
 
 }
 
+let countelements = 0;
 function postContent(){
     const date = new Date();
-    document.getElementsByClassName("post-time")[0].innerHTML = date;
-    let content = document.getElementById("text").value;
-    document.getElementsByClassName("post-content")[0].innerHTML= content;
+    const timenode = document.createTextNode(date);
+    const time = document.createElement("p");
+    time.appendChild (timenode);
+    time.className = "post-time";
+    document.querySelector("#posts").appendChild(time);
+
+
+
+    var textcontent = document.getElementById("text").value;
+    const node = document.createTextNode(textcontent);
+    const paragraph = document.createElement("p");
+    paragraph.appendChild (node);
+    paragraph.className = "post-content";
+    document.querySelector("#posts").appendChild(paragraph);
+
+    var elements = document.getElementsByClassName("post-content");
+
+    if(document.getElementById("redoption").checked){
+
+        for(let i = 0 ; i<countelements;i++){
+            elements[countelements].style.color ="red";
+        }
+
+    }
+    if(document.getElementById("blueoption").checked){
+        for(let i = 0 ; i<countelements;i++){
+            elements[countelements].style.color ="blue";
+        }
+
+    }
+
+
+
+}
+
+function newPost(){
+
+    var num = document.getElementsByName("quantity")[0].value;
+
+    for (let i = 0 ; i<num ;i++){
+        countelements = countelements + 1;
+        postContent();
+    }
 
 }
 
@@ -23,3 +65,4 @@ function hideMenu(){
     document.getElementById("main").style.display = "block";
 
 }
+

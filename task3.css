@@ -39,6 +39,7 @@ h1,h2,h3 {
     padding: 10px;
     margin: 0px 10px 10px 150px;
     min-height: 100px;
+    overflow : auto;
 }
 .post-time{
     font-weight : bold;

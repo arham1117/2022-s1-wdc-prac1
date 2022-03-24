@@ -16,20 +16,19 @@
             <h1>Part 3 - Javascript Playground</h1>
             <div id="mcount" onmouseenter="mouseCount()">
 
-            </div>
-            <div id="posts" >
+        </div>
+        <div id="posts" >
             <p class="post-time"></p>
             <p class ="post-content"></p>
-
-            </div>
+        </div>
             <hr />
             <textarea id="text" rows="4" cols="60">Type your text here...</textarea>
             <br />
             <div class="controls left">
                 <input type="number" name="quantity" value="1" /><br />
-                <input type="radio" name="color" value="blue" /> Blue<br />
-                <input type="radio" name="color" value="red" /> Red<br />
-                <button onclick="postContent()">Post</button>
+                <input type="radio" name="color" value="blue" id="blueoption"  /> Blue<br />
+                <input type="radio" name="color" value="red" id="redoption"  /> Red<br />
+                <button onclick="newPost()">Post</button>
             </div>
             <div class="controls left">
                 <input type="range" name="visible" min="1" max="10" value="10"/><br />
