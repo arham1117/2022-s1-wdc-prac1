@@ -8,7 +8,16 @@ function mouseCount(){
 
 let countelements = 0;
 function postContent(){
+
     const date = new Date();
+    document.querySelector(".post-time").innerHTML = date;
+    let content = document.getElementById("text").value;
+    document.querySelector(".post-content").innerHTML= content;
+
+
+
+
+    /* const date = new Date();
     const timenode = document.createTextNode(date);
     const time = document.createElement("p");
     time.appendChild (timenode);
@@ -39,7 +48,7 @@ function postContent(){
         }
 
     }
-
+ */
 
 
 }
