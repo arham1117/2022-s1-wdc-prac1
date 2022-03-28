@@ -81,16 +81,17 @@ function hidePost(){
     //let index = rangeinput - numposts;
     //alert (index);
 
-    for (let i = 0; i <= rangeinput; i++) {
-        posttime[i].style.display = "block";
-        postcontent[i].style.display= "block";
-    }
-
     if(numposts > rangeinput){
         for (let i = numposts-1; i >= rangeinput; i--) {
             posttime[i].style.display = "none";
             postcontent[i].style.display= "none";
         }
+    }
+
+    for (let i = 0; i < rangeinput; i++) {
+            posttime[i].style.display = "block";
+            postcontent[i].style.display= "block";
+
     }
 
 
