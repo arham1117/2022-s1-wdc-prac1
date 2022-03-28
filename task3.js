@@ -10,20 +10,20 @@ let countelements = 0;
 function postContent(){
 
     const date = new Date();
-    //const timenode = document.createTextNode(date);
     const time = document.createElement("p");
-    //const timenode = document.createElement("p");
     time.innerHTML = date;
-    //time.appendChild (timenode);
-    time.className = "post-time";
+    time.classList.add('post-time');
+    //document.querySelector(".post-time").appendChild(time);
     document.querySelector("#posts").appendChild(time);
+
+    //time.className = "post-time";
+    //document.querySelector("#posts").appendChild(time);
 
     var textcontent = document.getElementById("text").value;
     const paragraph = document.createElement("p");
     paragraph.innerHTML = textcontent;
-    //const paragraph = document.createElement("p");
-    //paragraph.appendChild (node);
-    paragraph.className = "post-content";
+    paragraph.classList.add('post-content');
+    //paragraph.className = "post-content";
     document.querySelector("#posts").appendChild(paragraph);
 
     var elements = document.getElementsByClassName("post-content");
