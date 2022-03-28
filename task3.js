@@ -70,7 +70,7 @@ function colorMenu(){
 }
 
 const range = document.getElementById("rangeslider");
-range.addEventListener('change', hidePost);
+range.addEventListener('input', hidePost);
 
 function hidePost(){
     var rangeinput = document.getElementById("rangeslider").value;
