@@ -27,6 +27,13 @@ function postContent() {
         paragraph.style.color = "blue";
     }
 
+    if (document.getElementById("boldoption").checked) {
+        paragraph.style.fontWeight = "bold";
+    }
+    if (document.getElementById("italicsoption").checked) {
+        paragraph.style.fontStyle = "italic";
+    }
+
     paragraph.classList.add('post-content');
     document.querySelector("#posts").appendChild(paragraph);
 
@@ -60,4 +67,32 @@ element.addEventListener('change', colorMenu);
 function colorMenu(){
     var color = document.getElementById("textinput").value;
     document.body.style.backgroundColor = color;
+}
+
+const range = document.getElementById("rangeslider");
+range.addEventListener('change', hidePost);
+
+function hidePost(){
+    var rangeinput = document.getElementById("rangeslider").value;
+    const posttime = document.getElementsByClassName("post-time");
+    const postcontent = document.getElementsByClassName("post-content");
+    let numposts = document.getElementsByClassName("post-content").length;
+
+    //let index = rangeinput - numposts;
+    //alert (index);
+
+    for (let i = 0; i <= rangeinput; i++) {
+        posttime[i].style.display = "block";
+        postcontent[i].style.display= "block";
+    }
+
+    if(numposts > rangeinput){
+        for (let i = numposts-1; i >= rangeinput; i--) {
+            posttime[i].style.display = "none";
+            postcontent[i].style.display= "none";
+        }
+    }
+
+
+
 }
