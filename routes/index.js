@@ -19,4 +19,34 @@ router.get('/last.txt', function (req, res, next) {
 
 });
 
+const colorarray=[];
+colorarray[0]='red';
+colorarray[1]='yellow';
+colorarray[2]='green';
+colorarray[3]='blue';
+var colorcounter=0;
+
+router.get('/color.html', function (req, res, next) {
+
+    res.send(`<!DOCTYPE html>
+        <html lang = "en">
+        <head>
+              <title>3-2</title>
+        <script src = "javascripts/task3-2.js"></script>
+        </head>
+        <body>
+            <h1 id= "heading" style="color:${colorarray[colorcounter]}" >${colorarray[colorcounter]}</h1>
+        </body>
+
+        </html>`);
+        colorcounter++;
+    if(colorcounter==4){
+      colorcounter=0;
+    }
+
+
+});
+
+
+
 module.exports = router;
