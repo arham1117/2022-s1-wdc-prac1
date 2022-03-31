@@ -76,5 +76,20 @@ router.get('/log.html', function (req, res, next) {
 
 });
 
+const newcolorarray=[];
+newcolorarray[0]='red';
+newcolorarray[1]='yellow';
+newcolorarray[2]='green';
+newcolorarray[3]='blue';
+var newcolorcounter=0;
 
+router.get('/color.txt', function (req, res, next) {
+
+    res.send(String(newcolorarray[newcolorcounter]));
+    newcolorcounter++;
+    if(newcolorcounter==4){
+      newcolorcounter=0;
+    }
+
+});
 module.exports = router;
