@@ -31,7 +31,7 @@ function email(){
     const xhttp = new XMLHttpRequest();
 
     xhttp.onload = function() {
-        document.getElementById('main').innerHTML = this.responseText;
+        document.getElementById('mainID').innerHTML = this.responseText;
     };
 
     xhttp.open("GET", '/contact.ajax' );
@@ -44,7 +44,7 @@ function search(){
     const xhttp = new XMLHttpRequest();
 
     xhttp.onload = function() {
-        document.getElementById('main').innerHTML = this.responseText;
+        document.getElementById('mainID').innerHTML = this.responseText;
     };
 
     xhttp.open("GET", '/search.ajax' );
@@ -57,7 +57,7 @@ function about(){
     const xhttp = new XMLHttpRequest();
 
     xhttp.onload = function() {
-        document.getElementById('main').innerHTML = this.responseText;
+        document.getElementById('mainID').innerHTML = this.responseText;
     };
 
     xhttp.open("GET", '/about.ajax' );
