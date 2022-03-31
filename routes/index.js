@@ -118,12 +118,12 @@ router.get('/log.json', function (req, res, next) {
 });
 
 router.get('/contact.ajax', function (req, res, next) {
-  const email = '<a href=' + '"https://www.nyan.cat/">' + "email" + "</a>";
+  const email = '<div>' + '<a href=' + '"https://www.nyan.cat/">' + "email" + "</a>" + '</div>';
   res.send(email);
 });
 
 router.get('/search.ajax', function (req, res, next) {
-  const search = '<input>' + '</input>' + '<button>' + "search" + '</button>';
+  const search = '<div>'+'<input>' + '</input>' + '<button>' + "search" + '</button>'+'</div>';
   res.send(search);
 });
 
