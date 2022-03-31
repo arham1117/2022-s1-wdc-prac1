@@ -27,4 +27,40 @@ function color(){
 
 }
 
+function email(){
+    const xhttp = new XMLHttpRequest();
 
+    xhttp.onload = function() {
+        document.getElementById('main').innerHTML = this.responseText;
+    };
+
+    xhttp.open("GET", '/contact.ajax' );
+    xhttp.send();
+
+}
+
+
+function search(){
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = function() {
+        document.getElementById('main').innerHTML = this.responseText;
+    };
+
+    xhttp.open("GET", '/search.ajax' );
+    xhttp.send();
+
+}
+
+
+function about(){
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = function() {
+        document.getElementById('main').innerHTML = this.responseText;
+    };
+
+    xhttp.open("GET", '/about.ajax' );
+    xhttp.send();
+
+}

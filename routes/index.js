@@ -6,28 +6,28 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-const datearray=[];
-datearray[0]= '';
+const datearray = [];
+datearray[0] = '';
 var counter = 0;
 router.get('/last.txt', function (req, res, next) {
   //let d = Date.now();
   res.send(String(datearray[counter]));
   const date = new Date();
-  datearray[counter+1]= date;
+  datearray[counter + 1] = date;
   counter++;
 
 });
 
-const colorarray=[];
-colorarray[0]='red';
-colorarray[1]='yellow';
-colorarray[2]='green';
-colorarray[3]='blue';
-var colorcounter=0;
+const colorarray = [];
+colorarray[0] = 'red';
+colorarray[1] = 'yellow';
+colorarray[2] = 'green';
+colorarray[3] = 'blue';
+var colorcounter = 0;
 
 router.get('/color.html', function (req, res, next) {
 
-    res.send(`<!DOCTYPE html>
+  res.send(`<!DOCTYPE html>
         <html lang = "en">
         <head>
               <title>3-2</title>
@@ -37,10 +37,10 @@ router.get('/color.html', function (req, res, next) {
         </body>
 
         </html>`);
-        colorcounter++;
-    if(colorcounter==4){
-      colorcounter=0;
-    }
+  colorcounter++;
+  if (colorcounter == 4) {
+    colorcounter = 0;
+  }
 
 
 });
@@ -51,14 +51,14 @@ var logcounter = 0;
 
 router.get('/log.html', function (req, res, next) {
   const d = new Date();
-  logarray.length = logcounter+1;
+  logarray.length = logcounter + 1;
 
-  for (let i = logcounter; i < logarray.length; i ++){
-    logarray[i]= '<li>' + d +  '</li>' ;
+  for (let i = logcounter; i < logarray.length; i++) {
+    logarray[i] = '<li>' + d + '</li>';
   }
 
   let logstring = logarray.join(" ");
-  let finallogstring = '<ul>' + logstring +  '</ul>' ;
+  let finallogstring = '<ul>' + logstring + '</ul>';
 
   res.send(`<!DOCTYPE html>
   <html lang = "en">
@@ -76,20 +76,57 @@ router.get('/log.html', function (req, res, next) {
 
 });
 
-const newcolorarray=[];
-newcolorarray[0]='red';
-newcolorarray[1]='yellow';
-newcolorarray[2]='green';
-newcolorarray[3]='blue';
-var newcolorcounter=0;
+const newcolorarray = [];
+newcolorarray[0] = 'red';
+newcolorarray[1] = 'yellow';
+newcolorarray[2] = 'green';
+newcolorarray[3] = 'blue';
+var newcolorcounter = 0;
 
 router.get('/color.txt', function (req, res, next) {
 
-    res.send(String(newcolorarray[newcolorcounter]));
-    newcolorcounter++;
-    if(newcolorcounter==4){
-      newcolorcounter=0;
-    }
+  res.send(String(newcolorarray[newcolorcounter]));
+  newcolorcounter++;
+  if (newcolorcounter == 4) {
+    newcolorcounter = 0;
+  }
 
 });
+
+
+const newlogarray = [];
+var newlogcounter = 0;
+
+router.get('/log.json', function (req, res, next) {
+  const date = new Date();
+  newlogarray.length = newlogcounter + 1;
+
+  for (let i = newlogcounter; i < newlogarray.length; i++) {
+    newlogarray[i] = date;
+
+  }
+
+  let newlogstring = newlogarray.toString();
+
+  let newfinallogstring = [
+    newlogstring
+  ];
+  res.json(newfinallogstring);
+
+  newlogcounter++;
+
+});
+
+router.get('/contact.ajax', function (req, res, next) {
+  const email = '<a href=' + '"https://www.nyan.cat/">' + "email" + "</a>";
+  res.send(email);
+});
+
+router.get('/search.ajax', function (req, res, next) {
+  const search = '<input>' + '</input>' + '<button>' + "search" + '</button>';
+  res.send(search);
+});
+
+
 module.exports = router;
+
