@@ -32,7 +32,6 @@ router.get('/color.html', function (req, res, next) {
         <html lang = "en">
         <head>
               <title>3-2</title>
-        <script src = "javascripts/task3-2.js"></script>
         </head>
         <body>
             <h1 id= "heading" style="color:${colorarray[colorcounter]}" >${colorarray[colorcounter]}</h1>
@@ -47,6 +46,39 @@ router.get('/color.html', function (req, res, next) {
 
 });
 
+
+
+const oldlist= [];
+var logcounter = 0;
+
+router.get('/log.html', function (req, res, next) {
+  const d = new Date();
+  oldlist[logcounter]= d;
+  const loglist= [];
+  loglist.length = logcounter+1;
+
+  //loglist[logcounter]+oldlist[logcounter];
+
+  for (let i = 0; i < loglist.length; i ++){
+    loglist[i] = '<li>' + oldlist[i]+ '</li>';
+  }
+
+  res.send(`<!DOCTYPE html>
+  <html lang = "en">
+  <head>
+        <title>3-3</title>
+  </head>
+  <body>
+      <ul>
+          ${loglist}
+      </ul>
+  </body>
+
+  </html>`);
+
+  logcounter++;
+
+});
 
 
 module.exports = router;
