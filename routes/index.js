@@ -117,9 +117,8 @@ router.get('/log.json', function (req, res, next) {
 
 });
 
-//href= "https://www.nyan.cat/"
 router.get('/contact.ajax', function (req, res, next) {
-  const email = `<a>email</a>`;
+  const email = `<a href="https://www.nyan.cat/">link</a>`;
   res.send(email);
 });
 
