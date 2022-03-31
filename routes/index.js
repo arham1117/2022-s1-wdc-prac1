@@ -48,20 +48,21 @@ router.get('/color.html', function (req, res, next) {
 
 
 
-const oldlist= [];
+
+
+const logarray = [];
 var logcounter = 0;
 
 router.get('/log.html', function (req, res, next) {
   const d = new Date();
-  oldlist[logcounter]= d;
-  const loglist= [];
-  loglist.length = logcounter+1;
+  logarray.length = logcounter+1;
 
-  //loglist[logcounter]+oldlist[logcounter];
-
-  for (let i = 0; i < loglist.length; i ++){
-    loglist[i] = '<li>' + oldlist[i]+ '</li>';
+  for (let i = logcounter; i < logarray.length; i ++){
+    logarray[i]= '<li>' + d +  '</li>' ;
   }
+
+  let logstring = logarray.join(" ");
+  let finallogstring = '<ul>' + logstring +  '</ul>' ;
 
   res.send(`<!DOCTYPE html>
   <html lang = "en">
@@ -69,9 +70,8 @@ router.get('/log.html', function (req, res, next) {
         <title>3-3</title>
   </head>
   <body>
-      <ul>
-          ${loglist}
-      </ul>
+    ${finallogstring}
+
   </body>
 
   </html>`);
