@@ -64,3 +64,38 @@ function about(){
     xhttp.send();
 
 }
+
+function accept(){
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = function() {
+    };
+
+    xhttp.open("GET", '/accept' );
+    xhttp.send();
+
+}
+
+
+function contentcheck(){
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = function() {
+        if(this.responseText == 403){
+            let para = document.createElement("p");
+            para.innerHTML = "Please accept Terms.";
+            let button = document.createElement("button");
+            button.onclick = accept;
+            document.getElementById('body').innerHTML = "HARHAHAH";
+
+        }
+        else{
+                document.getElementById('body').innerHTML = this.responseText;
+
+        }
+    };
+
+    xhttp.open("GET", '/content.ajax' );
+    xhttp.send();
+
+}

@@ -37,6 +37,7 @@ router.get('/color.html', function (req, res, next) {
         </body>
 
         </html>`);
+
   colorcounter++;
   if (colorcounter == 4) {
     colorcounter = 0;
@@ -126,6 +127,24 @@ router.get('/search.ajax', function (req, res, next) {
   const search = `<input type = "text"><button>search</button>`;
   res.send(search);
 });
+
+var flag = 0;
+router.get('/accept', function (req, res, next) {
+  flag = 1;
+  res.status(200).end();
+});
+
+router.get('/content.ajax', function (req, res, next) {
+  if(flag==0){
+    res.status(403).redirect('/public/main2.html');
+  }
+  else{
+    const paragraphs = `<p> Para 1 </p> <p> Para 2 </p>`;
+    res.send(paragraphs);
+  }
+
+});
+
 
 
 module.exports = router;
