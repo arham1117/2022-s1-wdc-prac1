@@ -101,7 +101,7 @@ function contentcheck(){
 }
 
 
-setInterval(gallery,10000);
+//setInterval(gallery,10000);
 
 function gallery(){
 
