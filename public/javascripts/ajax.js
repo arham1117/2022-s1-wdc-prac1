@@ -101,8 +101,6 @@ function contentcheck(){
 }
 
 
-setInterval(gallery,10000);
-
 function gallery(){
 
     const xhttp = new XMLHttpRequest();
