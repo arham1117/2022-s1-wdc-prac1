@@ -101,7 +101,7 @@ function contentcheck(){
 }
 
 
-//setInterval(gallery,10000);
+setInterval(gallery,10000);
 
 function gallery(){
 
@@ -114,6 +114,7 @@ function gallery(){
         img.setAttribute("alt", images.description);
         document.body.appendChild(img);
         var para = document.createElement("p");
+        para.innerHTML = images.description;
         document.body.appendChild(para);
         //document.getElementById("pic").src = "/images/" + images.uri;
         //document.getElementById("pic").alt = images.description;
