@@ -123,7 +123,7 @@ router.get('/contact.ajax', function (req, res, next) {
 });
 
 router.get('/search.ajax', function (req, res, next) {
-  const search = `<input></input><button>search</button>`;
+  const search = `<input type = "text"><button>search</button>`;
   res.send(search);
 });
 
