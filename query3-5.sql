@@ -1,1 +1,1 @@
-SELECT given_name, family_name, mark  FROM Students INNER JOIN Enrolments  ON Students.student_id = Enrolments.student_id WHERE mark < 50;
+SELECT given_name, family_name, mark  FROM Students INNER JOIN Enrolments  ON Students.student_id = Enrolments.student_id WHERE subject_code LIKE "COMP SCI 2000%" and mark < 50;
