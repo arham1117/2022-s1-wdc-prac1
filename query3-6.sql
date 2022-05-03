@@ -1,1 +1,0 @@
-UPDATE Enrolments SET mark = 50 WHERE student_id LIKE "a1111113%" and subject_code LIKE "COMP SCI 1102%";
