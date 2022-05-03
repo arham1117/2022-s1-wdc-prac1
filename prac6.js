@@ -46,7 +46,21 @@ var vueinst = new Vue({
     data:{
         choose: 'Choose...',
         special: SPECIALS[0],
-        show_ad: true
+        show_ad: true,
+        dark_mode: false,
+        isActive: true,
+        hasError: false
+
+    },
+    computed: {
+        styles: function(){
+            if(this.dark_mode == true){
+                return {
+                    'background-color' : '#333533',
+                    'color' : '#F5CB5C'
+                 };
+            }
+        }
     }
 });
 
