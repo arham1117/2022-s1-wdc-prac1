@@ -42,8 +42,10 @@ const SPECIALS = [
 ];
 
 var vueinst = new Vue({
-    el: '#sp',
+    el: '#app',
     data:{
-        choose: 'Choose...'
+        choose: 'Choose...',
+        special: SPECIALS[0]
     }
 });
+
