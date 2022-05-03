@@ -1,12 +1,6 @@
+
+
 /*
-
-Top menu (task 1.5):
-
-{ title:'Home',         url:'/' }
-{ title:'About',        url:'/about' }
-{ title:'Contact Us',   url:'/contact' }
-
-
 Top menu 2 (task 1.7):
 
 { title:'Home', url:'/', submenus: [] }
@@ -41,6 +35,12 @@ const SPECIALS = [
     { name:'Worchestershire Sauce', price:'$4.20', url:'https://upload.wikimedia.org/wikipedia/commons/4/4c/Worcester_Sauce_001.jpg' }
 ];
 
+/* const MENU = [
+        { title:'Home',         url:'/' },
+        { title:'About',        url:'/about' },
+        { title:'Contact Us',   url:'/contact' }
+];
+ */
 var vueinst = new Vue({
     el: '#app',
     data:{
@@ -48,9 +48,11 @@ var vueinst = new Vue({
         special: SPECIALS[0],
         show_ad: true,
         dark_mode: false,
-        isActive: true,
-        hasError: false
-
+        top_menu: [
+            { title:'Home', url:'/' },
+            { title:'About',  url:'/about' },
+            { title:'Contact Us', url:'/contact' }
+          ]
     },
     computed: {
         styles: function(){
