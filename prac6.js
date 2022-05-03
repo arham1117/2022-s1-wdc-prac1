@@ -52,7 +52,12 @@ var vueinst = new Vue({
             { title:'Home', url:'/' },
             { title:'About',  url:'/about' },
             { title:'Contact Us', url:'/contact' }
-          ]
+          ],
+        i : -1,
+        c_text: 'type your comment here',
+        c_arr: [
+
+        ],
     },
     computed: {
         styles: function(){
