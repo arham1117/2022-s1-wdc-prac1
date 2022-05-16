@@ -21,4 +21,24 @@ router.get('/brew', function (req, res, next) {
 });
 
 
+const mssg = [];
+mssg[0] = 'first';
+var counter = 0;
+
+router.post('/pass-it-on', function (req, res, next) {
+  var p1 = req.body.message;
+  var p2 = req.body.submit;
+
+  if(p1==''){
+    res.send(400);
+  }else{
+    counter++;
+    mssg[counter]= p1;
+    res.send(mssg[counter-1]);
+
+  }
+
+});
+
+
 module.exports = router;
