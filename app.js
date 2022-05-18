@@ -20,7 +20,7 @@ app.use('/users', usersRouter);
 let count = 0;
 function countreq(req,res,next){
     count++;
-    console.log(count);
+    console.log("Received"+count+"requests");
     next();
 }
 app.use(countreq);
