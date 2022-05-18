@@ -40,7 +40,7 @@ router.post('/pass-it-on', function (req, res, next) {
 
 });
 
-const p3 = []
+const p3 = [];
 
 router.post('/combine', function (req, res, next) {
   const p1 = req.body.lines;
@@ -53,6 +53,7 @@ router.post('/combine', function (req, res, next) {
   res.send(text);
 
 });
+
 
 
 module.exports = router;
