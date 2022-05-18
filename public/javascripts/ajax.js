@@ -23,20 +23,22 @@ function get_post() {
     xhttp.onload = function () {
 
 
-         /*    const dt = JSON.parse(this.responseText);
+        const dt = JSON.parse(this.responseText);
+        var length = dt.length;
+        for (var i=0; i<length-pc;i++){
 
-/*
             let postdiv = document.createElement("DIV");
             let heading = document.createElement("H2");
             postdiv.appendChild(heading);
             let para = document.createElement("P");
             postdiv.appendChild(para);
-            heading.innerHTML =  dt[10].title;
-            para.innerHTML = dt[10].content;
-            document.getElementById("main").appendChild(postdiv); */
- */
+            heading.innerHTML =  dt[i].title;
+            para.innerHTML = dt[i].content;
+            document.getElementById("main").appendChild(postdiv);
 
+        }
 
+        pc = pc +  i;
 
     };
 

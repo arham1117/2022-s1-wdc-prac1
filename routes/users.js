@@ -11,8 +11,8 @@ var data =[];
 var postcount =0;
 
 router.post('/addpost', function (req, res, next) {
- // data[postcount] =  {"title":req.body.title, "content":req.body.content};
-  //postcount++;
+  data[postcount] =  {"title":req.body.title, "content":req.body.content};
+  postcount++;
   res.end();
 
 
@@ -20,7 +20,7 @@ router.post('/addpost', function (req, res, next) {
 
 
 router.get('/getposts', function (req, res, next) {
-  //data.reverse();
+  data.reverse();
   res.send(data);
 
 });
