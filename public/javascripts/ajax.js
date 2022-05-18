@@ -23,9 +23,9 @@ function get_post() {
     xhttp.onload = function () {
 
 
-            const dt = JSON.parse(this.responseText);
+         /*    const dt = JSON.parse(this.responseText);
 
-
+/*
             let postdiv = document.createElement("DIV");
             let heading = document.createElement("H2");
             postdiv.appendChild(heading);
@@ -33,8 +33,8 @@ function get_post() {
             postdiv.appendChild(para);
             heading.innerHTML =  dt[10].title;
             para.innerHTML = dt[10].content;
-            document.getElementById("main").appendChild(postdiv);
-
+            document.getElementById("main").appendChild(postdiv); */
+ */
 
 
 
