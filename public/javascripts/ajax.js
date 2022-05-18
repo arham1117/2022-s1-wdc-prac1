@@ -24,17 +24,16 @@ function get_post() {
 
 
             const dt = JSON.parse(this.responseText);
-            const lenght = dt.length
 
 
-                let postdiv = document.createElement("DIV");
-                let heading = document.createElement("H2");
-                postdiv.appendChild(heading);
-                let para = document.createElement("P");
-                postdiv.appendChild(para);
-                heading.innerHTML =  dt[0].title;
-                para.innerHTML = dt[0].content;
-                document.getElementById("main").appendChild(postdiv);
+            let postdiv = document.createElement("DIV");
+            let heading = document.createElement("H2");
+            postdiv.appendChild(heading);
+            let para = document.createElement("P");
+            postdiv.appendChild(para);
+            heading.innerHTML =  dt[10].title;
+            para.innerHTML = dt[10].content;
+            document.getElementById("main").appendChild(postdiv);
 
 
 
