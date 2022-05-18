@@ -11,6 +11,7 @@ var data =[];
 var postcount =0;
 
 router.post('/addpost', function (req, res, next) {
+  console.log('POST from a user');
   data[postcount] =  {"title":req.body.title, "content":req.body.content};
   postcount++;
   res.end();
