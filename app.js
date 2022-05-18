@@ -17,4 +17,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+let count = 0;
+function countreq(req,res,next){
+    count++;
+    console.log(count);
+    next();
+}
+app.use(countreq);
+
+
+
+
 module.exports = app;
