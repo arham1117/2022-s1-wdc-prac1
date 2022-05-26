@@ -31,7 +31,6 @@ router.get('/result', function(req, res, next) {
 router.post('/addactor', function(req, res, next) {
   req.pool.getConnection(function(err,connection){
     if(err){
-      console.log(err);
       res.sendStatus(500);
       return;
     }
@@ -39,7 +38,6 @@ router.post('/addactor', function(req, res, next) {
     connection.query(query,[req.body.first_name,req.body.last_name], function(err,rows,fields){
       connection.release();
       if(err){
-        console.log(query);
         res.sendStatus(500);
         return;
       }
