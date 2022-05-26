@@ -9,7 +9,13 @@ function getActors(){
         const actors = JSON.parse(this.responseText);
         var length = actors.length;
 
-        for (var i=0;i<length-pc;i++){
+        if(pc==0){
+            document.getElementById("f").innerHTML = actors[0].first_name;
+            document.getElementById("l").innerHTML = actors[0].last_name;
+
+        }
+
+        for (var i=1;i<length-pc;i++){
             let tr = document.createElement("tr");
             document.getElementById("test").appendChild(tr);
             let fn = document.createElement("td");

@@ -23,7 +23,7 @@ router.get('/result', function(req, res, next) {
         res.sendStatus(500);
         return;
       }
-      res.send(rows);
+      res.json(rows);
     });
   });
 });
