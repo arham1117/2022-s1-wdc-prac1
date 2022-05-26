@@ -1,0 +1,2 @@
+SELECT COUNT(*)
+From film;
